@@ -1,5 +1,4 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
 
 const galleryContainer = document.querySelector(".gallery");
 const imagesMarkup = createItemsMarkup(galleryItems);
@@ -29,7 +28,6 @@ galleryContainer.addEventListener('click', event => {
         return;
       } 
         const instance = basicLightbox.create(`<img src="${event.target.dataset.source}" width="800" height="600">`, {
-          //closable: true/false //Prevents the lightbox from closing when clicking its background
           onShow: (instance) => {
             document.addEventListener('keydown', closeOnEsc)},
           onClose: (instance) => {
@@ -44,11 +42,6 @@ galleryContainer.addEventListener('click', event => {
           instance.close() 
          }      
 })
-
-// console.log(createImgCards);
-
-
-
 
 // Создание и рендер разметки по массиву данных galleryItems и предоставленному шаблону элемента галереи.
 // Реализация делегирования на div.gallery и получение url большого изображения.
